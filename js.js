@@ -54,9 +54,9 @@
 //     const newString = string.split(" ");
 //     let longTitle = newString[0];
 //     for (const title of newString) {
-        
+
 //         if (title.length > longTitle.length) longTitle = title;
-       
+
 //     }
 //      return longTitle
 //       // Change code above this line
@@ -85,7 +85,7 @@
 //         if (number > value) {
 //           newArr.push(number);
 //         }
-        
+
 //     }
 //     return newArr;
 //   // Change code above this line
@@ -116,14 +116,25 @@
 
 // !========================================
 
-function getEvenNumbers(start, end) {
-  // Change code below this line
-  const newArr = [];
-  for (let i = start; i <= end; i += 1) {
-    if (i % 2 === 0) newArr.push(i);
-  }
+// function getEvenNumbers(start, end) {
+//   // Change code below this line
+//   const newArr = [];
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) newArr.push(i);
+//   }
 
-  return newArr;
-  // Change code above this line
+//   return newArr;
+//   // Change code above this line
+// }
+// console.log(getEvenNumbers(6, 12));
+
+// !==============================================
+function includes(array, value) {
+  // Change code below this line
+  for (const str of array) {
+    if (str === value) return true;     
+  }
+  return false;
+    // Change code above this line
 }
-console.log(getEvenNumbers(6, 12));
+console.log(includes([1, 2, 3, 4, 5], 1));
