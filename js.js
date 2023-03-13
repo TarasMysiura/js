@@ -129,12 +129,65 @@
 // console.log(getEvenNumbers(6, 12));
 
 // !==============================================
-function includes(array, value) {
-  // Change code below this line
-  for (const str of array) {
-    if (str === value) return true;     
-  }
-  return false;
-    // Change code above this line
+// function includes(array, value) {
+//   // Change code below this line
+//   for (const str of array) {
+//     if (str === value) return true;
+//   }
+//   return false;
+//     // Change code above this line
+// }
+// console.log(includes([1, 2, 3, 4, 5], 1));
+
+// !==============================================
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
+//   for (const key in object) {
+//     // Change code below this line
+//     if (object.hasOwnProperty(key)) {
+//       propCount += 1;
+//     }
+//   }
+//   // Change code above this line
+//   return propCount;
+// }
+// console.log(countProps({ name: "Mango", age: 2 }));
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
+// !==============================================
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2225;
+
+// for (const key in apartment) {
+//   // Change code below this line
+//   if (apartment.hasOwnProperty(key)) {
+//     keys.push(key);
+//     values.push(apartment[key]);
+//   }
+//   // Change code above this line
+// }
+
+// console.log(keys);
+// console.log(values);
+// !===============================================
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+const values = [];
+// Change code below this line
+const keys = Object.keys(apartment);
+for (const key of keys) {
+  values.push(apartment[key]);
 }
-console.log(includes([1, 2, 3, 4, 5], 1));
+console.log(keys);
+console.log(values);
