@@ -238,6 +238,32 @@
 // console.log(hexColors);
 // console.log(rgbColors);
 // !===================================
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+// for (const product of products) {
+//   if (product.name === productName) {
+//     return product.price;
+//   }
+// }
+// return null;
+
+//   // Change code above this line
+// }
+
+// console.log(getProductPrice("Radar"));
+// console.log(getProductPrice("Grip"));
+// console.log(getProductPrice("Scanner"));
+// console.log(getProductPrice("Droid"));
+// console.log(getProductPrice("Engine"));
+
+// !=======================================
 const products = [
   { name: "Radar", price: 1300, quantity: 4 },
   { name: "Scanner", price: 2700, quantity: 3 },
@@ -245,20 +271,16 @@ const products = [
   { name: "Grip", price: 1200, quantity: 9 },
 ];
 
-function getProductPrice(productName) {
+function getAllPropValues(propName) {
   // Change code below this line
-for (const product of products) {
-  if (product.name === productName) {
-    return product.price;
+  const rez = [];
+  for (const product of products) {
+    // if (Object.keys(product) === propName) {
+      rez.push(product.propName);
+    // }
   }
-}
-return null;
+  return rez;
 
   // Change code above this line
 }
-
-console.log(getProductPrice("Radar"));
-console.log(getProductPrice("Grip"));
-console.log(getProductPrice("Scanner"));
-console.log(getProductPrice("Droid"));
-console.log(getProductPrice("Engine"));
+console.log(getAllPropValues("name"));
