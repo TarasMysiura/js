@@ -386,7 +386,7 @@
 //     today: { low: todayLow, high: todayHigh },
 //     tomorrow: { low: tomorrowLow, high: tomorrowHigh },
 //   } = forecast;
-  
+
 //   // Change code above this line
 //   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 // }
@@ -473,6 +473,83 @@
 
 // !============================32===============================
 
+// Change code below this line
+// function addOverNum(...args) {
+//   let total = 0;
 
+//   for (let i = 1; i < args.length; i += 1) {
+//     if (args[i] > args[0]) {
+//       total += args[i];
+//     }
+//   }
 
+//   return total;
+//   // Change code above this line
+// }
+// console.log(addOverNum(50, 15, 27));
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+// console.log(addOverNum(15, 32, 6, 13, 19, 8));
+// console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
 
+// !=========================33===================================
+// // Change code below this line
+// function findMatches(lists, ...args) {
+//   const matches = []; // Don't change this line
+//   for (const agr of args) {
+//     for (const list of lists) {
+//       if (list === agr) {
+//         matches.push(list);
+//       }
+//     }
+//   }
+
+//   // Change code above this line
+//   return matches;
+// }
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+// console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+// console.log(findMatches([63, 11, 8, 29], 4, 7, 16));
+// !==================34================================
+// const bookShelf = {
+//   // Change code below this line
+//   books: ["The last kingdom", "The guardian of dreams"],
+//   getBooks() {
+//     return "Returning all books";
+//   },
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+//   },
+//   removeBook(bookName) {
+//     return `Deleting book ${bookName}`;
+//   },
+//   updateBook(oldName, newName) {
+//     return `Updating book ${oldName} to ${newName}`;
+//   },
+
+//   // Change code above this line
+// };
+// console.log(bookShelf.getBooks());
+// console.log(bookShelf.addBook("Haze"));
+// console.log(bookShelf.removeBook("Red sunset"));
+// console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+// !===============================35===============================
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     books = this.books.splice(this.books.indexOf(oldName), 1, newName);
+//     return this.books;
+//     // Change code below this line
+//     // Change code above this line
+//   },
+// };
+// console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
+// console.log(bookShelf.updateBook("The last kingdom", "Dune"));
+// // console.log(bookShelf.removeBook("Red sunset"));
+// // console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+// !===============================36====================================
+const atTheOldToad = {
+  // Change code below this line
+    
+  // Change code above this line
+};
