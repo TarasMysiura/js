@@ -402,4 +402,74 @@
 // })
 // );
 // !=======================27=============================
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+// console.log(bestScore);
+// console.log(worstScore);
+
+// !=======================28=============================
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [... firstGroupScores, ... secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(... allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(allScores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+// !======================29=================================
+// const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = {...defaultSettings, ...overrideSettings};
+
+// console.log(finalSettings);
+// !=========================30==============================
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+// return {completed, category, priority, ...data}
+//   // Change code above this line
+// }
+// console.log(makeTask({}));
+// console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }))
+// console.log(makeTask({ category: "Finance", text: "Take interest" }));
+// console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
+// console.log(makeTask({ text: "Buy bread" }));
+
+// !==========================31================================
+// Change code below this line
+function add(...args) {
+    let total = 0
+    for (const arg of args) {
+      total += arg
+    }
+    return total
+    // Change code above this line
+}
+console.log(add(15, 27));
+console.log(add(12, 4, 11, 48));
+console.log(add(32, 6, 13, 19, 8));
+console.log(add(74, 11, 62, 46, 12, 36));
+
+
 
