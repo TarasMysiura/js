@@ -655,7 +655,6 @@
 const calculateTotalBalance = users => {
   
     users.reduce((total, user) => {(total + user.balance);
-      return total;
 }, 0);
 };
 // Change code above this line
