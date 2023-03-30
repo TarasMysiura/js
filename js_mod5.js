@@ -120,4 +120,221 @@
 // console.log(historyService.getOrdersByEmail("solomon@topmail.net"));
 // console.log(historyService.getOrdersByEmail("artemis@coldmail.net"));
 
-// !
+// !=====================4========================
+// Зміни код таким чином, щоб об'єкт parent став прототипом для
+//  об'єкта у змінній сhild.
+
+// Оголошена змінна parent
+// Значення змінної parent - це об'єкт
+// Виклик parent.hasOwnProperty("surname") повертає true
+// Виклик parent.hasOwnProperty("heritage") повертає true
+// Оголошена змінна child
+// Значення змінної child - це об'єкт
+// Виклик child.hasOwnProperty("name") повертає true
+// Звернення до child.name повертає "Jason"
+// Виклик child.hasOwnProperty("age") повертає true
+// Звернення до child.age повертає 27
+// Виклик child.hasOwnProperty("surname") повертає false
+// Звернення до child.surname повертає "Moore"
+// Виклик child.hasOwnProperty("heritage") повертає false
+// Звернення до child.heritage повертає "Irish"
+// Виклик parent.isPrototypeOf(child) повертає true
+// Використовується метод Object.create()
+
+// const parent = {
+//     name: "Stacey",
+//     surname: "Moore",
+//     age: 54,
+//     heritage: "Irish",
+//   };
+//   // Change code below this line
+
+//   const child = Object.create(parent);
+
+//   // Change code above this line
+//   child.name = "Jason";
+//   child.age = 27;
+
+// console.log(child)
+
+// !========================5=========================
+// Зміни код, побудувавши ланцюжок прототипів таким чином,
+// щоб об'єкт ancestor був прототипом для parent, а той, своєю чергою,
+// був прототипом для child.
+
+// Оголошена змінна ancestor
+// Значення змінної ancestor - це об'єкт.
+// Оголошена змінна parent
+// Значення змінної parent - це об'єкт.
+// Оголошена змінна child
+// Значення змінної child - це об'єкт.
+// Виклик ancestor.isPrototypeOf("parent") повертає true
+// Виклик parent.isPrototypeOf("child") повертає true
+// Виклик ancestor.hasOwnProperty("surname") повертає true
+// Звернення до ancestor.surname повертає "Dawson"
+// Виклик parent.hasOwnProperty("surname") повертає true
+// Звернення до parent.surname повертає "Moore"
+// Виклик child.hasOwnProperty("surname") повертає false
+// Звернення до child.surname повертає "Moore"
+// Виклик ancestor.hasOwnProperty("heritage") повертає true
+// Звернення до ancestor.heritage повертає "Irish"
+// Виклик parent.hasOwnProperty("heritage") повертає false
+// Звернення до parent.heritage повертає "Irish"
+// Виклик child.hasOwnProperty("heritage") повертає false
+// Звернення до child.heritage повертає "Irish"
+// Використовується метод Object.create()
+
+// const ancestor = {
+//   name: "Paul",
+//   age: 83,
+//   surname: "Dawson",
+//   heritage: "Irish",
+// };
+// // Change code below this line
+
+// const parent =  Object.create(ancestor);
+// parent.name = "Stacey";
+// parent.surname = "Moore";
+// parent.age = 54;
+
+// console.log(parent)
+
+// const child = Object.create(parent);
+// child.name = "Jason";
+// child.age = 27;
+// console.log(child)
+
+// !=====================6======================
+// Використовуючи ключове слово class, оголоси клас Car з порожнім тілом.
+
+// Оголошений клас Car
+// Результат виклику new Car() - це порожній об'єкт
+
+// class Car{}
+
+// const myCar = new Car()
+// !========================7===================
+// Додай класу Car метод constructor, який приймає три параметри:
+
+// brand - марка автомобіля.
+// model - модель автомобіля.
+// price - ціна автомобіля.
+// Клас Car повинен створювати об'єкт з однойменними властивостями brand,
+//  model і price, значеннями яких повинні бути передані аргументи під час
+//    його виклику з оператором new.
+
+// Оголошений клас Car
+// Клас Car має метод constructor
+// В результаті виклику new Car("Audi", "Q3", 36000) утвориться об'єкт { brand: "Audi", model: "Q3", price: 36000 }
+// В результаті виклику new Car("BMW", "X5", 58900) утвориться об'єкт { brand: "BMW", model: "X5", price: 58900 }
+// В результаті виклику new Car("Nissan","Murano", 31700) утвориться об'єкт { brand: "Nissan", model: "Murano", price: 31700 }
+// class Car {
+//   // Change code below this line
+//   constructor(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+
+//   // Change code above this line
+// }
+// !=======================8=====================
+// Виконай рефакторинг класу Car таким чином, щоб він приймав один параметр -
+// об'єкт з властивостями brand, model і price. Деструктуризуй об'єкт в сигнатурі
+//  (підписі) конструктора.
+
+// Оголошений клас Car
+// Клас Car має метод constructor
+// В результаті виклику new Car({ brand: "Audi", model: "Q3", price: 36000 })
+//   утвориться об'єкт { brand: "Audi", model: "Q3", price: 36000 }
+// В результаті виклику new Car({ brand: "BMW", model: "X5", price: 58900 })
+//   утвориться об'єкт { brand: "BMW", model: "X5", price: 58900 }
+// В результаті виклику new Car({ brand: "Nissan", model: "Murano", price: 31700 })
+//   утвориться об'єкт { brand: "Nissan", model: "Murano", price: 31700 }
+// class Car {
+//   // Change code below this line
+//   constructor({brand, model, price}) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   // Change code above this line
+// }
+// !======================9=========================
+// Додай класу Car два методи.
+
+// getPrice() - повертає значення властивості price з об'єкта, який буде його викликати.
+// changePrice(newPrice) - оновлює значення властивості price в об'єкта, який буде його викликати на newPrice.
+// В класі Car оголошений метод getPrice
+// Метод getPrice повертає значення властивості price екземпляра класу, який його викликає
+// В класі Car оголошений метод changePrice
+// Метод changePrice змінює значення властивості price екземпляра класу, який його викликає
+
+// class Car {
+//   constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   // Change code below this line
+//   getPrice(){
+//     return this.price
+//   }
+//   changePrice(newPrice){
+//     this.price = newPrice;
+//   }
+
+//   // Change code above this line
+// }
+
+// !=====================10=======================
+// Напиши клас Storage, який буде створювати об'єкти для управління складом товарів.
+//   Клас очікує тільки один аргумент - початковий масив товарів,
+//     який записується у властивість items об'єкта, що створюється.
+
+// Оголоси наступні методи класу:
+
+// getItems() - повертає масив поточних товарів у властивості items об'єкта,
+//  який викликає цей метод.
+// addItem(newItem) - приймає новий товар newItem і додає його в масив товарів
+//   у властивості items об'єкта, який викликає цей метод.
+// removeItem(itemToRemove) - приймає товар itemToRemove і видаляє його з масиву
+//    товарів у властивості items об'єкта, який викликає цей метод.
+// Під коментарем ми додали ініціалізацію екземпляра і виклики методів у тій
+//   послідовності, в якій твій код перевірятимуть тести. Будь ласка, нічого там не змінюй.
+
+// Оголошений клас Storage
+// В класі Storage оголошений метод getItems
+// В класі Storage оголошений метод addItem
+// В класі Storage оголошений метод removeItem
+// Метод getItems повертає значення властивості items екземпляра класу, який його викликає
+// Метод addItem змінює властивість items екземпляра класу, який його викликає
+// Метод removeItem змінює властивість items екземпляра класу, який його викликає
+// В результаті виклику new Storage(["Nanitoids", "Prolonger", "Antigravitator"]) значення змінної storage - це об'єкт
+// Об'єкт storage містить властивість items
+// Перший виклик storage.getItems(), відразу після інціалізаціі екземпляра, повертає масив ["Nanitoids", "Prolonger", "Antigravitator"]
+// Другий виклик, storage.getItems(), після виклику storage.addItem("Droid"), повертає масив ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// Третій виклик storage.getItems(), після виклику storage.removeItem("Prolonger"), повертає масив ["Nanitoids", "Antigravitator", "Droid"]
+
+class Storage {
+  constructor(items) {
+    this.items = items
+  }
+  getItems(){
+    return this.items
+  }
+  addItem(newItem){
+    return this.items.push(newItem)
+  }
+  removeItem(itemToRemove){
+    return this.items.filter(el => el !== itemToRemove);
+  }
+}
+
+// Change code above this line
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
