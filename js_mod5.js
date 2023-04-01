@@ -327,7 +327,7 @@ class Storage {
     return this.items.push(newItem)
   }
   removeItem(itemToRemove){
-    return this.items.filter(el => el !== itemToRemove);
+     this.items = this.items.filter(el => el !== itemToRemove);
   }
 }
 
